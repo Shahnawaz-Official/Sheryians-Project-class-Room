@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './Button'
 function Navbar() {
   return (
-    <div className='max-w-screen-xl  py-6 mx-auto flex items-center justify-between  '>
+    <div className='max-w-screen-xl  py-6 mx-auto flex items-center justify-between border-b-[2px] border-zinc-700  '>
      <div className='flex  gap-40'>
        <h1 className='text-3xl ml-20'>Shahnawaz</h1>
       <div className="links flex gap-10">
