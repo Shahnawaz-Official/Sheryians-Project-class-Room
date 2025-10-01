@@ -4,6 +4,7 @@ import Work from './component/Work'
 import Stripes from './component/Stripes'
 import Products from './component/Products'
 import Marquees from './component/Marquees'
+import Cards from './component/Cards'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
   <Stripes />
   <Products />
   <Marquees />
+  <Cards />
  </div>
   )
 }
