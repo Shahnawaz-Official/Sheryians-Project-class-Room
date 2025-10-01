@@ -6,8 +6,12 @@ import Products from './component/Products'
 import Marquees from './component/Marquees'
 import Cards from './component/Cards'
 import Fouter from './component/Fouter'
+import LocomotiveScroll from 'locomotive-scroll';
+
+
 
 function App() {
+  const scroll = new LocomotiveScroll();
   return (
  <div className='w-full h-full bg-black text-white'>
   <Navbar />

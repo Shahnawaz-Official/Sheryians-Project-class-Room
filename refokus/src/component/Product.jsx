@@ -3,8 +3,8 @@ import Button from './Button'
 
 function Product({item}) {
   return (
-    <div className='w-full py-10 text-white'>
-        <div className='max-w-screen-xl mx-auto flex items-center justify-between '>
+    <div className='w-full text-white'>
+        <div className='max-w-screen-xl mx-auto flex items-center h-[23rem] justify-between '>
             <h1 className='text-6xl capitalize font-medium'>{item.title}</h1>
             <div className='flex flex-col gap-5 w-1/3'> 
                 <p className='text-justify'>{item.disc}</p>

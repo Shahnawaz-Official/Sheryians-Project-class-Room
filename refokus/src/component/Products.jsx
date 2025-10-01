@@ -11,12 +11,11 @@ function Products() {
        
     ];
   return (
-    <div>
-      {products.map((val,index)=>{
-        return <Product key={index} item={val} />
-         
-        
-      })}
+    <div className='mt-45 relative'>
+      {products.map((val,index)=> <Product key={index} item={val} />)}
+      <div className='h-full w-full absolute top-0 pointer-events-none'>
+        <div className='absolute w-[26rem] rounded-2xl h-[23rem] left-[46%] bg-sky-400 -translate-x-[50%] '></div>
+      </div>
      
     </div>
   )
