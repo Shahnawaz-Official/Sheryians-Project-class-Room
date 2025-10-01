@@ -8,7 +8,7 @@ function Cards() {
         <Card width="w-[30%]" start={false} para={true} heading={"Project &  Case Study"} mainheading={"Potfolio"} />
 
         
-        <Card width="w-[70%]" start={true} para={false} />
+        <Card width="w-[70%]" start={true} para={false} bghovercolor={"bg-violet-600"} />
       </div>
     </div>
   )

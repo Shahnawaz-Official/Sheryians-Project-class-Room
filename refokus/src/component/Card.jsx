@@ -1,9 +1,9 @@
 import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-function Card({width,start ,para,heading="Let`s go To It Togather",mainheading = "Get in Touch"}) {
+function Card({width,start ,para,heading="Let`s go To It Togather",mainheading = "Get in Touch", bghovercolor}) {
   return (
-    <div className={`${width} p-5 rounded-xl bg-zinc-800 `}>
+    <div className={`${width} p-5 rounded-xl bg-zinc-800 hover:${bghovercolor}`}>
       <div className='w-full min-h-[25rem] flex flex-col justify-between'>
        <div>
          <div className='w-full flex justify-between items-center'>
