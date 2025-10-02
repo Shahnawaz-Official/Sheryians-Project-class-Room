@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product';
+import { motion } from "framer-motion"
 
 function Products() {
+  
     const products = [
         {title:"Shahnawaz",disc:" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ullam, amet nobis ratione maiores ex, distinctio illum esse minima corporis possimus id sapiente voluptatibus tempora temporibus placeat consequatur veritatis velit?",live:true,case:false},
         {title:"Aditya",disc:"Doloremque, quod sapiente! Dolor laudantium at non ea incidunt architecto voluptate aut perspiciatis ratione vero illum, laboriosam numquam omnis voluptatibus.",live:true,case:false},
@@ -10,11 +12,22 @@ function Products() {
         {title:"Aman Kumar ",disc:"Nostrum explicabo fugiat, illo quidem ullam cum similique eum labore mollitia tempora placeat! Accusantium fuga qui quasi illo iure sint nemo impedit, distinctio libero cum cupiditate? Ad, quisquam.",live:true,case:true},
        
     ];
+     const [pos , setpos] = useState(0)
+     const mover = (val)=>{
+      setpos(val*23)
+     }
+
   return (
     <div className='mt-45 relative'>
-      {products.map((val,index)=> <Product key={index} item={val} />)}
-      <div className='h-full w-full absolute top-0 pointer-events-none'>
-        <div className='absolute w-[26rem] rounded-2xl h-[23rem] left-[46%] bg-sky-400 -translate-x-[50%] '></div>
+      {products.map((val,index)=> <Product mover={mover} index={index} key={index} item={val} />)}
+      <div className='h-full w-full absolute top-0 pointer-events-none '>
+        <motion.div initial={{y:pos , x:"-50%"}} animate={{y:pos +"rem"}}  className='absolute w-[26rem] rounded-2xl h-[23rem] left-[46%] bg-sky-400 overflow-hidden '>
+          <div className='w-full h-full bg-sky-100'></div>
+          <div className='w-full h-full bg-sky-200'></div>
+          <div className='w-full h-full bg-sky-300'></div>
+          <div className='w-full h-full bg-sky-400'></div>
+          <div className='w-full h-full bg-sky-500'></div>
+        </motion.div>
       </div>
      
     </div>
