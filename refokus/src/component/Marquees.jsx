@@ -38,9 +38,9 @@ function Marquees() {
   ];
 
   return (
-    <div className='flex flex-col gap-5 p-2 mt-10'>
+    <div className='flex flex-col relative w-full select-none overflow-hidden  gap-5 py-20 mt-10'>
       {images.map((item, index) => (
-        <Marquee imagesurl={item} key={index} />
+        <Marquee imagesurl={item} key={index} direction={index===0?"left":"right"} />
       ))}
     </div>
   )

@@ -21,15 +21,14 @@ function Products() {
     <div className='mt-45 relative'>
       {products.map((val,index)=> <Product mover={mover} index={index} key={index} item={val} />)}
       <div className='h-full w-full absolute top-0 pointer-events-none '>
-        <motion.div initial={{y:pos , x:"-50%"}} animate={{y:pos +"rem"}}  className='absolute w-[26rem] rounded-2xl h-[23rem] left-[46%] bg-sky-400 overflow-hidden '>
-          <div className='w-full h-full bg-sky-100'></div>
-          <div className='w-full h-full bg-sky-200'></div>
-          <div className='w-full h-full bg-sky-300'></div>
-          <div className='w-full h-full bg-sky-400'></div>
-          <div className='w-full h-full bg-sky-500'></div>
+        <motion.div initial={{y:pos , x:"-50%"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} animate={{y:pos +"rem"}}  className='absolute w-[26rem] rounded-2xl h-[23rem] left-[46%] bg-sky-400 overflow-hidden '>
+          <motion.div animate={{y: -pos +"rem"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} className='w-full h-full bg-sky-600'></motion.div>
+          <motion.div animate={{y: -pos +"rem"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} className='w-full h-full bg-sky-500'></motion.div>
+          <motion.div animate={{y: -pos +"rem"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} className='w-full h-full bg-sky-400'></motion.div>
+          <motion.div animate={{y: -pos +"rem"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} className='w-full h-full bg-sky-300'></motion.div>
+          <motion.div animate={{y: -pos +"rem"}} transition={{ease:[0.37, 0, 0.63, 1],duration:.5}} className='w-full h-full bg-sky-200'></motion.div>
         </motion.div>
       </div>
-     
     </div>
   )
 }
