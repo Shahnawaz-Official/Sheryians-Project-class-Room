@@ -6,8 +6,9 @@
     width: 7px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #181819;
+    background: #6d6d76;
     border-radius: 10px;
+    cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #6556CD;
